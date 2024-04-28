@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Login</title>
+    <title>User Registration</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -64,25 +64,23 @@
         .error {
             color: red;
             margin-top: 10px;
-            text-align: center;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h2>User Login</h2>
-        <form id="login-form" method="POST">
+        <h2>User Registration</h2>
+        <form id="registration-form" method="POST">
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" required><br>
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required><br>
-            <button type="submit">Login</button>
+            <button type="submit">Register</button>
         </form>
         {% if error %}
             <div class="error">{{ error }}</div>
         {% endif %}
-        <p>Don't have an account? <a href="{{ url_for('register') }}">Register</a></p>
+        <p>Already have an account? <a href="{{ url_for('login') }}">Login</a></p>
     </div>
 </body>
 </html>
-

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sog'lom Yurak Portal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        /* CSS styles for the navigation bar */
+        nav {
+            background-color: #4CAF50; /* Green background color */
+            overflow: hidden;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        nav ul li {
+            float: left;
+        }
+
+        nav ul li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        /* Change the link color on hover */
+        nav ul li a:hover {
+            background-color: #3e8e41;
+        }
+
+        /* Add spacing between the links */
+        nav ul li + li {
+            margin-left: 20px;
+        }
+        
+        /* Main content */
+        .main-content {
+            text-align: justify;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Styling for the header/logo */
+        .header {
+            padding: 20px;
+            text-align: center;
+            background-color: #f2f2f2; /* Light gray background color */
+        }
+
+        .header h1 {
+            margin: 0;
+            color: #4CAF50; /* Green color */
+            font-size: 28px;
+        }
+
+        /* Hero section */
+
+
+        .hero-section h2 {
+            margin-bottom: 20px;
+            font-size: 36px;
+            font-weight: bold;
+        }
+
+        /* Educational section */
+        .educational-section {
+            padding: 50px 0;
+            text-align: left;
+        }
+
+        .article {
+            margin-bottom: 40px;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #f2f2f2; /* Light gray background color */
+        }
+
+        .article h3 {
+            margin-top: 0;
+            font-size: 24px;
+            color: #4CAF50; /* Green color */
+        }
+
+        .article p {
+            margin-bottom: 0;
+            color: #333;
+        }
+
+        /* Style for images */
+        .centered-image img {
+            width: 700px; /* Adjusted width for the image */
+            height: 400px;
+            margin-right: 10px;
+        }
+
+        /* Style for description text */
+.description {
+    max-width: 50%;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f2f2f2; /* Light gray background color */
+    margin-bottom: 40px;
+}
+
+.description h2 {
+    margin-top: 0;
+    font-size: 24px;
+}
+
+.description p.article {
+    margin-bottom: 0;
+    color: #333;
+    text-align: justify;
+    line-height: 1.6;
+}
+
+    </style>
+</head>
+<body>
+    <!-- Header/Logo -->
+    <div class="header">
+        <h1><i class="fas fa-heart"></i> Sog'lom Yurak </h1>
+    </div>
+
+    <!-- Navigation bar -->
+    <nav>
+        <ul>
+            <li><a href="/">Bosh sahifa</a></li>
+            <li><a href="/login">Kirish</a></li>
+            <li><a href="/register">Ro'yxatdan o'tish</a></li>
+            <li><a href="/index">Tekshirish</a></li>
+            <li><a href="/donate">Xayriya</a></li> <!-- New donation link -->
+        </ul>
+    </nav>
+
+    <!-- Main content -->
+    <div class="main-content">
+        <!-- Picture -->
+        <div class="centered-image">
+            <img src="{{ url_for('static', filename='Untitled.jpg') }}" alt="Doctor Picture">
+        </div>
+        <!-- Description text -->
+        <div class="description">
+            <h2 style="color: #4CAF50;">Application Description</h2>
+            <p style="font-size: 18px; line-height: 1.6; color: #333; text-align: justify; margin-top: 10px;">Ilova tavsifi
+                Ushbu ilova yurakni sog'lom saqlash uchun qimmatli ma'lumot va resurslarni taqdim etishga qaratilgan. Maqolalar, maslahatlar va ta'lim mazmuni orqali foydalanuvchilar yurak sog'lig'ining turli jihatlari haqida bilib olishlari va sog'lom turmush tarzi odatlarini qabul qilishlari mumkin.
+
+                Balanslangan ovqatlanish, muntazam jismoniy faoliyat bilan shug'ullanish yoki muntazam tekshiruvlar muhimligini tushunish haqida bo'ladimi, bizning platformamiz odamlarga yurak sog'lig'ini nazorat qilish imkoniyatini berishga intiladi.</p>
+        </div>
+    </div>
+
+    <!-- Educational section -->
+    <div class="educational-section">
+        <div class="article">
+            <h3>1. Puchoq qilmang yoki tutmaslik</h3>
+            <p>Sog'lom yurak uchun qilishingiz kerak bo'lgan eng yaxshi narsalardan biri puchoq qilish yoki puchoq qilmagan tutqichlardan foydalanmang. Agar siz puchoqchi bo'lmasangiz, ikkinchi qo'lini to'g'ri tutilgan odamlardan uzoq turib tuting...</p>
+        </div>
+        <div class="article">
+            <h3>2. Harakatlaning: Kunga kamida 30-60 daqiqa faol bo'ling</h3>
+            <p>Ma'mur, har kuni faol fizik faoliyat, yurak kasalligi xavfi kamaytiradi. Fizik faoliyat sizning og'iringizni nazorat qiladi. U ayni paytda yurakga og'ir mehnat qiladigan boshqa sharoitlarga ega bo'lish imkonini beradi. Ularning orasida yuqori qon bosimi, yuqori xolesterol va ikkinchi turi diabet...</p>
+        </div>
+        <div class="article">
+            <h3>3. Sog'lom oziq-ovqat yeying</h3>
+            <p>Sog'lom oziq-ovqat yechish yurakni himoya qilishi, qon bosimi va xolesterolni yaxshilash, va ikkinchi turi diabet xavfini kamaytirishga yordam berishi mumkin...</p>
+        </div>
+        <div class="article">
+            <h3>4. Sog'lom vazn saqlang</h3>
+            <p>Orqaga qarab, yoki bosh tarafiga qarab ziyoda bo'lish — yurak kasalligining xavfini oshiradi. Qo'shimcha vazn, yurak kasalligiga ega bo'lishning imkonini oshiradigan holatlarga olib keladi. Bu holatlarning o'rtasida yuqori qon bosimi, yuqori xolesterol va ikkinchi turi diabet...</p>
+        </div>
+    </div>
+</body>
+</html>
